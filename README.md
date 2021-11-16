@@ -35,6 +35,6 @@ This macro is designed to specify any diameter and any thread pitch. Why would I
 
 The macro checks to see if variables are provided and in range. For example, Z must be negative. Single block is suppressed early on in the program so you don't have to single block through all of the parameter checks. Single block is restored right at the first place machine movement is called.
 
-Also worth noting is that G41/G42 cutter comp is NOT used. However, the diameter of the cutter specified in the cutter comp list is absolutely used. The radius of the first cut is calculated as followed: (Diameter of first thread / 2) - (cutter diameter / 2). Subsequent arcs continuuously increase as neccessary. The marco calculates the number of threads required to clear the top of the hole at Z0 before returning to Z.3 and returning to the previous program.
+Also worth noting is that G41/G42 cutter comp is NOT used. However, the diameter of the cutter specified in the cutter comp list is absolutely used. The radius of the first cut is calculated as followed: (Diameter of first thread / 2) - (cutter diameter / 2). Subsequent arcs continuuously increase as neccessary. The marco calculates the number of threads required to clear the top of the hole at Z0 before returning to Z.3 and returning to the previous program. Any Diameter number can be used, even on the same tool. This is so that you can compensate different holes seperately. You can also just change the I value accordingly to make the threads bigger or smaller.
 
 

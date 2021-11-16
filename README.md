@@ -5,6 +5,13 @@ Steve.a.mccluskey@gmail.com
 
 I wrote this macro a few years ago. It is designed to cut tapered threads of any diameter and any thread pitch with a constant taper of 3/4" per foot, or 1/16th of an inch per inch. For anyone who knows about cutting NPT threads with a single point tool, it its not easy to program, especially with cutter compensation.
 
+I developed this for several reasons:
+1) NPT threads are a true spiral and impossible to program at the machine without CAD/CAM software.
+2) Concentric helixes of one pitch each with increasing diameters work but are really difficult to calculate at the machine, and in my opinion, a poor approximation of a true spiral.
+3) Cutter compensation add another layer of difficulty and basically impossible to impliment.
+4) I wanted something that will cut a constant taper of any thread pitch or diameter because some there are times when making something non-standard is required.
+5) I wanted a closer approximation to a true spiral. This macro cuts 90 degree arcs in quadrants instead of a full circle, and steps out as neccesary between each arc. I'm sure there is a way to divide each cut into an almost infinite amount of arcs but 4 was quite a bit better than 1 per pitch.
+
 Use as follows: drill, bore, or interpolate the tap drill size according to any standard tap drill chart. Chamfer the hole as neccesary. Position the single point tool .3 above
 the center of the hole.
 I use a custom G code for this and have assigned it 152.
